@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./public/css/style.css" />
+    <script src="./public/js/global.js"></script>
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <div class="container">
+        <div class="contain-header">
+          <div class="logo-section">
+            <img src="/public/assets/logo.png" alt="Gotong" class="logo" />
+          </div>
+          <div class="right-section">
+            <nav class="nav-section">
+              <a href="/kegiatan.html" class="nav-item active">Kegiatan</a>
+            </nav>
+            <div class="buttons">
+              <a href="/kegiatan.html" class="icon-button">
+                <img
+                  src="/public/assets/search.png"
+                  alt="Search"
+                  class="icon"
+                />
+              </a>
+
+              <a href="/chat.html" class="icon-button">
+                <img src="/public/assets/chat.png" alt="Chat" class="icon" />
+              </a>
+            </div>
+            <a class="user-profile" href="#">
+              <img
+                src="/public/assets/franz.png"
+                alt="Franz Hermann"
+                class="user-avatar"
+              />
+              <span class="user-name">Franz Hermann</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="chat-section">
+      <div class="container">
+        <div class="chat-box">
+          <div class="sidebar">
+            <div class="search-container">
+              <div class="search-box">
+                <svg
+                  class="search-icon"
+                  fill="currentColor"
+                  viewBox="0 0 20 20"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+                <input
+                  type="text"
+                  class="search-input"
+                  placeholder="Cari disini"
+                />
+              </div>
+            </div>
+
+            <div class="contacts-list">
+              <div class="contact-item">
+                <div
+                  class="avatar"
+                  style="
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiNGRkY1RjUiLz4KPHN2ZyB4PSIxMiIgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTRzLTEuNzktNC00LTQtNCAxLjc5LTQgNCAxLjc5IDQgNCA0em0wIDJjLTIuNjcgMC04IDEuMzQtOCA0djJoMTZ2LTJjMC0yLjY2LTUuMzMtNC04LTR6IiBmaWxsPSIjNjY2Ii8+Cjwvc3ZnPgo8L3N2Zz4K');
+                  "
+                ></div>
+                <div class="contact-info">
+                  <div class="contact-name">Panti Asuhan Bakti</div>
+                  <div class="contact-message">Halo saya ingin bergtanya</div>
+                </div>
+                <div class="contact-meta">
+                  <div class="contact-time">15 Nov</div>
+                  <div>11:20</div>
+                </div>
+              </div>
+
+              <div class="contact-item active">
+                <div
+                  class="avatar"
+                  style="
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiM0Q0FGNTFCMCIVBZ4CiIQc3ZnIHg9IjEyIiB5PSIxMiIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIGZpbGw9Im5vbmUiPgogIDxwYXRoIGQ9Ik0xMiAxMmMyLjIxIDAgNC0xLjc5IDQtNHMtMS43OS00LTQtNHMtNCAxLjc5LTQgNCAxLjc5IDQgNCA0em0wIDJjLTIuNjcgMC04IDEuMzQtOCA0djJoMTZ2LTJjMC0yLjY2LTUuMzMtNC04LTR6IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4KPC9zdmc+');
+                  "
+                ></div>
+                <div class="contact-info">
+                  <div class="contact-name">Lansia Peduli</div>
+                  <div class="contact-message">Halo saya ingin bertanya</div>
+                </div>
+                <div class="contact-meta">
+                  <div class="contact-time">15 Nov</div>
+                  <div>09:30</div>
+                </div>
+              </div>
+
+              <div class="contact-item">
+                <div
+                  class="avatar"
+                  style="
+                    background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDgiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCA0OCA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjQiIGN5PSIyNCIgcj0iMjQiIGZpbGw9IiNGRkVFRUUiLz4KPHN2ZyB4PSIxMiIgeT0iMTIiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTRzLTEuNzktNC00LTQtNCAxLjc5LTQgNCAxLjc5IDQgNCA0em0wIDJjLTIuNjcgMC04IDEuMzQtOCA0djJoMTZ2LTJjMC0yLjY2LTUuMzMtNC04LTR6IiBmaWxsPSIjNjY2Ii8+Cjwvc3ZnPgo8L3N2Zz4K');
+                  "
+                ></div>
+                <div class="contact-info">
+                  <div class="contact-name">Rumah Asa</div>
+                  <div class="contact-message">
+                    Baik untuk untuk barengan atau individu...
+                  </div>
+                </div>
+                <div class="contact-meta">
+                  <div class="contact-time">2 Nov</div>
+                  <div>15:02</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="main-chat">
+            <div class="chat-header">
+              <div
+                class="chat-avatar"
+                style="
+                  background-image: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjAiIGN5PSIyMCIgcj0iMjAiIGZpbGw9IiM0Q0FGNTBCMCIIVBZ4CiIQc3ZnIHg9IjgiIHk9IjgiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIj4KICA8cGF0aCBkPSJNMTIgMTJjMi4yMSAwIDQtMS43OSA0LTRzLTEuNzktNC00LTQtNCAxLjc5LTQgNCAxLjc5IDQgNCA0em0wIDJjLTIuNjcgMC04IDEuMzQtOCA0djJoMTZ2LTJjMC0yLjY2LTUuMzMtNC04LTR6IiBmaWxsPSJ3aGl0ZSIvPgo8L3N2Zz4KPC9zdmc+');
+                "
+              ></div>
+              <div class="chat-name">Lansia Peduli</div>
+            </div>
+
+            <div class="chat-messages">
+              <div class="message sent">Selamat Pagi</div>
+              <div class="message received">
+                Beberapa lansia sudah punya, tetapi yang belum akan kami
+                pinjamkan agar lebih familiar
+              </div>
+              <div class="message sent">
+                Untuk kegiatan membantu lansia dengan gadget ini apakah mereka
+                sudah punya gadgetnya?
+              </div>
+              <div class="message received">
+                Okeaa trims ya kak :) nanti saya ikut pasti untuk bantu, ga
+                sabar banget
+              </div>
+            </div>
+
+            <div class="message-input-container">
+              <button class="attach-button">
+                <svg width="20" height="20" fill="#666" viewBox="0 0 20 20">
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a3 3 0 00-3 3v4a5 5 0 0010 0V7a1 1 0 112 0v4a7 7 0 11-14 0V7a5 5 0 1110 0v4a3 3 0 11-6 0V7a1 1 0 012 0v4a1 1 0 102 0V7a3 3 0 00-3-3z"
+                    clip-rule="evenodd"
+                  ></path>
+                </svg>
+              </button>
+              <input
+                type="text"
+                class="message-input"
+                placeholder="Ketik disini"
+              />
+              <button class="send-button">
+                <svg width="20" height="20" fill="white" viewBox="0 0 20 20">
+                  <path
+                    d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+                  ></path>
+                </svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer-section">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="footer-logo">
+            <img
+              src="./public/assets/logo.png"
+              alt="Gotong Logo"
+              class="logo-icon"
+            />
+          </div>
+          <a href="#" class="footer-link">Tentang Kami</a>
+          <a href="#" class="footer-link">Hak kekayaan intelektual</a>
+          <a href="#" class="footer-link">Blog</a>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Bantuan dan Panduan</h3>
+          <a href="#" class="footer-link">Syarat dan ketentuan</a>
+          <a href="#" class="footer-link">Kebijakan privasi</a>
+          <a href="#" class="footer-link">Bantuan</a>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Ikuti Kami</h3>
+          <div class="social-links">
+            <a href="#" class="social-link facebook">
+              <svg class="social-icon" viewBox="0 0 24 24">
+                <path
+                  d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link twitter">
+              <svg class="social-icon" viewBox="0 0 24 24">
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"
+                />
+              </svg>
+            </a>
+            <a href="#" class="social-link instagram">
+              <svg class="social-icon" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-column">
+          <h3 class="footer-title">Anda ingin minta bantuan?</h3>
+          <button class="cta-button">Daftar kegiatan relawan</button>
+          <a href="#" class="info-link">Informasi lebih lanjut</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>©Gotong, 2025. ALL RIGHTS RESERVED</p>
+      </div>
+    </footer>
+  </body>
+</html>
